@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#070914" />
+  <title>Magnet Mayhem</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hud">
+      <div class="brand"><span class="brand-mark">✦</span><div><b>MAGNET</b><strong>MAYHEM</strong></div></div>
+      <div class="stat"><span>SCORE</span><b id="score">0</b></div>
+      <div class="stat"><span>COMBO</span><b id="combo">x1</b></div>
+      <div class="stat"><span>LEVEL</span><b id="level">1</b></div>
+      <button id="pauseBtn" class="icon-btn" aria-label="Pause">Ⅱ</button>
+    </header>
+    <section class="stage-wrap">
+      <canvas id="game" aria-label="Magnet Mayhem game"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <div class="panel">
+          <div class="panel-kicker" id="overlayKicker">PAUSED</div>
+          <h1 id="overlayTitle">MAGNET MAYHEM</h1>
+          <p id="overlayText">Pull matching cores into the magnet. Avoid the hazards.</p>
+          <button id="primaryBtn" class="primary">PLAY</button>
+          <button id="secondaryBtn" class="secondary hidden">REPLAY LEVEL</button>
+        </div>
+      </div>
+      <div id="toast" class="toast"></div>
+    </section>
+    <footer class="controls"><span>DRAG / HOLD</span><span>•</span><span>PULL CORES TO THE MAGNET</span><span>•</span><span>DON'T HIT THE HAZARDS</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
