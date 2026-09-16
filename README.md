@@ -13,8 +13,10 @@
 - Upgrade Lab: Magnet Power, Time Core and Shield Matrix
 - Medals and persistent player statistics
 - Daily Challenge with rotating modifiers: Rapid, Hazard Rush, Double Score and Ice Field
+- Daily Challenge run tracking and today's best score
 - Persistent progress with localStorage
 - Level replay and progression unlocks
+- Accessible level-select best-score labels and screen-reader descriptions
 - Pause, sound toggle, fullscreen, mouse, touch, pointer and keyboard controls
 - WASD / arrow keys / IJKL keyboard movement
 - Double-click / double-tap / keyboard Overdrive
