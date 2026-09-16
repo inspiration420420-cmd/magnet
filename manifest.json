@@ -1,0 +1,13 @@
+{
+  "name": "Magnet Mayhem",
+  "short_name": "Magnet Mayhem",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05060e",
+  "theme_color": "#070914",
+  "description": "A fast neon arcade game about magnetic chaos.",
+  "icons": [
+    {"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
