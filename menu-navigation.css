@@ -1,0 +1,9 @@
+/* Unified menu navigation: exactly two UI layers — main menu and gameplay overlay. */
+.overlay{z-index:20!important}
+#mainMenu{z-index:10!important}
+.overlay .panel{animation:menuPanelIn .24s ease-out both}
+.overlay.menu-panel-mode{z-index:20!important}
+.overlay.menu-panel-mode .panel{width:min(760px,calc(100% - 30px));max-height:calc(100% - 30px);border-radius:32px;padding:clamp(30px,5vw,58px);background:linear-gradient(145deg,#121c35f8,#070b17f8);border-color:#3a4a6e;box-shadow:0 35px 120px #000d,0 0 80px #58e6ff0a}
+.overlay.menu-panel-mode .panel h1{font-size:34px;letter-spacing:.06em}
+.overlay.menu-panel-mode #overlayText{max-height:55vh;overflow:auto}
+@keyframes menuPanelIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
