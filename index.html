@@ -4,7 +4,7 @@
 <body>
 <main class="game-shell">
 <header class="hud">
- <button id="homeBtn" class="brand" type="button"><span class="brand-mark">✦</span><span><b>MAGNET</b><strong>MAYHEM</strong></span></button>
+ <button id="homeBtn" class="brand" type="button" aria-label="Open main menu"><span class="brand-mark">✦</span><span><b>MAGNET</b><strong>MAYHEM</strong></span></button>
  <div class="stat"><span>SCORE</span><b id="score">0</b></div><div class="stat"><span>COMBO</span><b id="combo">x1</b></div><div class="stat"><span>LEVEL</span><b id="level">1</b></div><button id="shopBtn" class="icon-btn" type="button" aria-label="Upgrade Lab">LAB</button><button id="pauseBtn" class="icon-btn" type="button" aria-label="Pause game">Ⅱ</button>
 </header>
 <section class="stage-wrap"><canvas id="game" aria-label="Magnet Mayhem game area"></canvas><div id="toast" class="toast" aria-live="polite"></div>
@@ -12,4 +12,4 @@
 </section>
 <footer class="controls"><span>DRAG / HOLD</span><span>•</span><span>WASD / ARROWS</span><span>•</span><span>O = OVERDRIVE</span><span>•</span><button id="muteBtn" type="button" aria-label="Toggle sound">SOUND ON</button></footer>
 </main>
-<script src="game2.js"></script><script src="systems.js"></script><script src="mobile-enhancements.js"></script><script src="boss-system.js"></script><script src="challenge-system.js"></script><script src="accessibility-controls.js"></script><script src="gameplay-overdrive.js"></script><script src="polish-system.js"></script><script src="level-select.js"></script><script src="advanced-gameplay.js"></script><script>if('serviceWorker' in navigator)navigator.serviceWorker.register('./service-worker.js');</script></body></html>
+<script src="game2.js"></script><script src="systems.js"></script><script src="mobile-enhancements.js"></script><script src="boss-system.js"></script><script src="challenge-system.js"></script><script src="accessibility-controls.js"></script><script src="gameplay-overdrive.js"></script><script src="polish-system.js"></script><script src="level-select.js"></script><script src="advanced-gameplay.js"></script><script src="main-menu.js"></script><script>if('serviceWorker' in navigator)navigator.serviceWorker.register('./service-worker.js');</script></body></html>
