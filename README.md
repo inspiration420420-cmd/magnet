@@ -15,7 +15,8 @@
 - Daily Challenge with rotating modifiers: Rapid, Hazard Rush, Double Score and Ice Field
 - Persistent progress with localStorage
 - Level replay and progression unlocks
-- Pause, sound toggle, fullscreen, mouse, touch and pointer controls
+- Pause, sound toggle, fullscreen, mouse, touch, pointer and keyboard controls
+- WASD / arrow keys / IJKL keyboard movement
 - Double-click / double-tap / keyboard Overdrive
 - Particle bursts, rings, glow effects, boss pulse and screen shake
 - Responsive HTML5 canvas presentation
@@ -23,6 +24,8 @@
 
 ## Controls
 **Hold / drag** in the playfield to move the magnet.
+
+**WASD / arrow keys / IJKL** move the magnet from the keyboard.
 
 **Double-click / double-tap** or press **O** to trigger Overdrive.
 
