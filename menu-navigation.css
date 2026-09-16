@@ -1,9 +1,19 @@
-/* Unified menu navigation: exactly two UI layers — main menu and gameplay overlay. */
-.overlay{z-index:20!important}
-#mainMenu{z-index:10!important}
-.overlay .panel{animation:menuPanelIn .24s ease-out both}
-.overlay.menu-panel-mode{z-index:20!important}
-.overlay.menu-panel-mode .panel{width:min(760px,calc(100% - 30px));max-height:calc(100% - 30px);border-radius:32px;padding:clamp(30px,5vw,58px);background:linear-gradient(145deg,#121c35f8,#070b17f8);border-color:#3a4a6e;box-shadow:0 35px 120px #000d,0 0 80px #58e6ff0a}
-.overlay.menu-panel-mode .panel h1{font-size:34px;letter-spacing:.06em}
-.overlay.menu-panel-mode #overlayText{max-height:55vh;overflow:auto}
-@keyframes menuPanelIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* Magnet Mayhem — unified navigation shell. One menu surface, one gameplay overlay. */
+#mainMenu{z-index:30!important;position:absolute;inset:0;display:grid;place-items:center;pointer-events:auto;transition:opacity .18s ease}
+#mainMenu.hidden{display:none!important}
+#mainMenu.menu-subpage{background:rgba(4,7,18,.34);backdrop-filter:blur(7px)}
+#mainMenu .main-menu-card{position:relative;transition:transform .22s cubic-bezier(.2,.8,.2,1),opacity .22s ease}
+#mainMenu .menu-screen{width:min(820px,calc(100% - 28px));max-height:calc(100% - 28px);overflow:auto;padding:clamp(26px,5vw,52px);border-radius:30px;background:linear-gradient(145deg,#121c35f8,#070b17f8);border:1px solid #3a4a6e;box-shadow:0 35px 120px #000d,0 0 80px #58e6ff0a;opacity:0;transform:translateX(28px)}
+#mainMenu .menu-screen-ready{opacity:1;transform:translateX(0)}
+#mainMenu .menu-screen-exit{opacity:0;transform:translateX(-24px)}
+#mainMenu .menu-screen h2{margin:8px 0 24px;font-size:clamp(28px,5vw,42px);letter-spacing:.06em}
+#mainMenu .menu-back{position:absolute;top:20px;left:20px;border:1px solid #33415f;background:#0b1122;color:#dbe9ff;border-radius:12px;padding:10px 14px;font-weight:900;cursor:pointer}
+#mainMenu .menu-screen-content{width:100%}
+#mainMenu .menu-note{color:#8e9bbb}
+#mainMenu .stat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px}
+#mainMenu .stat-cards div{padding:16px;border:1px solid #293653;border-radius:16px;background:#0b1122;text-align:center}
+#mainMenu .stat-cards b{display:block;font-size:24px}.stat-cards span{display:block;font-size:10px;color:#7f8daa;font-weight:900;margin-top:5px;letter-spacing:.08em}
+#mainMenu .score-list{display:grid;gap:7px;max-height:48vh;overflow:auto}.score-list div{display:flex;justify-content:space-between;padding:12px 14px;border:1px solid #293653;border-radius:12px;background:#0b1122}.score-list b{color:#58e6ff}
+#mainMenu .level-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-height:55vh;overflow:auto;padding:4px}.level-pick{min-height:58px;border:1px solid #2e3d5c;border-radius:12px;background:#0b1122;color:#eef5ff;font-weight:900;cursor:pointer}.level-pick:hover{border-color:#58e6ff;transform:translateY(-1px)}.level-pick.boss{border-color:#ff63b8}.level-pick small{display:block;color:#7f8daa;font-size:8px;margin-top:4px}
+#mainMenu .help-list{display:grid;gap:12px;text-align:left}.help-list div{display:grid;gap:4px;padding:14px 16px;border:1px solid #293653;border-radius:14px;background:#0b1122}.help-list b{color:#58e6ff}.help-list span{color:#aebbd4;line-height:1.45}
+@media(max-width:620px){#mainMenu .stat-cards{grid-template-columns:repeat(2,1fr)}#mainMenu .level-grid{grid-template-columns:repeat(4,1fr)}#mainMenu .menu-screen{padding:52px 18px 22px}}
