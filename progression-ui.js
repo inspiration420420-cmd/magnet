@@ -1,0 +1,9 @@
+(()=>{
+const ov=document.getElementById('overlay'),ok=document.getElementById('overlayKicker'),ot=document.getElementById('overlayTitle'),ox=document.getElementById('overlayText');
+let originalStart=window.start,originalFinish=window.finish,run={level:0,maxCombo:1,cores:0};
+function start(n){run={level:Number(n)||1,maxCombo:1,cores:0};return originalStart.apply(this,arguments)}
+function sample(){if(typeof g==='undefined'||!g)return;if(g.n!==run.level){run={level:g.n,maxCombo:1,cores:0}}run.maxCombo=Math.max(run.maxCombo,Number(g.combo)||1);run.cores=Math.max(run.cores,(g.cores||[]).filter(c=>!c.alive).length)}
+function finish(win){sample();const level=run.level,score=Math.floor(g&&g.score||0),cores=run.cores,maxCombo=run.maxCombo,time=Math.max(0,Number(g&&g.time)||0);originalFinish.apply(this,arguments);if(!ov||!g)return;const best=Number(((()=>{try{const s=JSON.parse(localStorage.getItem('magnetMayhemSave'))||{};return s.best&&s.best[level]||0}catch{return 0}})()));if(win){ok.textContent=level%10===0?'BOSS VICTORY':'RUN COMPLETE';ot.textContent='LEVEL '+level;ox.innerHTML=`<b>RUN SUMMARY</b><br><br>CORES PULLED · <b>${cores}</b><br>PEAK COMBO · <b>x${maxCombo}</b><br>TIME REMAINING · <b>${time.toFixed(1)}s</b><br>SCORE · <b>${score.toLocaleString()}</b><br>BEST · <b>${best.toLocaleString()}</b><br><br>${level<1000?`NEXT · LEVEL <b>${level+1}</b>`:'<b>THE FULL 1,000-LEVEL RUN IS COMPLETE.</b>'}`}else{ok.textContent='RUN OVER';ot.textContent='MAGNET JAM';ox.innerHTML=`<b>RUN SUMMARY</b><br><br>LEVEL REACHED · <b>${level}</b><br>CORES PULLED · <b>${cores}</b><br>PEAK COMBO · <b>x${maxCombo}</b><br>SCORE · <b>${score.toLocaleString()}</b><br>BEST · <b>${best.toLocaleString()}</b><br><br>REPLAY LEVEL ${level} OR CONTINUE YOUR PROGRESSION.`}}
+window.start=start;window.finish=finish;
+function loop(){sample();requestAnimationFrame(loop)}requestAnimationFrame(loop);
+})();
