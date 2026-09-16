@@ -6,22 +6,27 @@
 - 1,000-level progression
 - Procedurally varied level layouts
 - Increasing core and hazard density
-- Special boss levels every 10 levels
+- Special boss levels every 10 levels with escalating hazard pressure
 - Combo multiplier up to x15
-- Score, time bonus, stars, best scores, coins
-- Four collectible power-ups: Time, Freeze, Shield, Overdrive
-- Shield, freeze and 2X gameplay states
-- Achievement progression
+- Score, time bonus, stars, best scores and coins
+- Four collectible power-ups: Time, Freeze, Shield and Overdrive
+- Upgrade Lab: Magnet Power, Time Core and Shield Matrix
+- Medals and persistent player statistics
+- Daily Challenge with rotating modifiers: Rapid, Hazard Rush, Double Score and Ice Field
 - Persistent progress with localStorage
-- Level select and replay
-- Pause, sound toggle, mouse, touch and pointer controls
-- Particle bursts, rings, glow effects and screen shake
+- Level replay and progression unlocks
+- Pause, sound toggle, fullscreen, mouse, touch and pointer controls
+- Double-click / double-tap / keyboard Overdrive
+- Particle bursts, rings, glow effects, boss pulse and screen shake
 - Responsive HTML5 canvas presentation
+- Installable/offline-capable PWA
 
 ## Controls
 **Hold / drag** in the playfield to move the magnet.
 
-**Double-click / double-tap** to trigger Overdrive.
+**Double-click / double-tap** or press **O** to trigger Overdrive.
+
+Press **Space** to pause/resume and **R** to replay the current level.
 
 Collect power-ups when they appear. Avoid the moving red hazards while pulling every core into the magnet.
 
